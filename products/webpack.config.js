@@ -4,7 +4,7 @@ import ModuleFederationPlugin from 'webpack/lib/container/ModuleFederationPlugin
 export default {
   mode: 'development',
   devServer: {
-    port: 3000,
+    port: 5173,
   },
   plugins: [
     new ModuleFederationPlugin({

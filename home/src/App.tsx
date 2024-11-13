@@ -1,35 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Header from './components/Header'
+import Footer from './components/Footer'
+import './index.scss'
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+const App = () => (
+  <div className="mt-10 text-3xl mx-auto max-w-6xl">
+  <Header />
+    <div className='font-bold text-2xl my-14'>Home page</div>
+<Footer />
+  </div>
+)
+const rootElement = document.getElementById('app')
+if (!rootElement) throw new Error('Failed to find the root element')
 
-export default App
+const root = ReactDOM.createRoot(rootElement as HTMLElement)
+
+root.render(<App />)

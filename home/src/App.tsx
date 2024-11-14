@@ -6,9 +6,9 @@ import Footer from "./components/Footer";
 import "./index.scss";
 
 const App = () => (
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <Header />
-    <div className="font-bold text-2xl my-14">Home page</div>
+  <div className="max-w-6xl mx-auto mt-10 text-3xl">
+    <Header app={{name: "home"}} />
+    <div className="text-2xl font-bold my-14">Home page</div>
     <Footer />
   </div>
 );

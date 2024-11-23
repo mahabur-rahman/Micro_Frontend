@@ -9,7 +9,7 @@ const printCompilationMessage = require('./compilation.config.js');
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:5000/",
+    publicPath: "http://localhost:8000/",
   },
 
   resolve: {
@@ -17,7 +17,7 @@ module.exports = (_, argv) => ({
   },
 
   devServer: {
-    port: 5000,
+    port: 8000,
     historyApiFallback: true,
     watchFiles: [path.resolve(__dirname, 'src')],
     onListening: function (devServer) {
@@ -62,13 +62,12 @@ module.exports = (_, argv) => ({
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "pdf",
+      name: "todoList",
       filename: "remoteEntry.js",
-      remotes: {
-        home: "home@http://localhost:3000/remoteEntry.js",
-        todoList: "todoList@http://localhost:8000/remoteEntry.js"
+      remotes: {},
+      exposes: {
+        './List' : "./src/components/List.tsx"
       },
-      exposes: {},
       shared: {
         ...deps,
         react: {

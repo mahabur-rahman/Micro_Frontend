@@ -4,11 +4,17 @@ import ReactDOM from "react-dom/client";
 import Header from "home/Header";
 import Footer from "home/Footer";
 import "home/styles";
+import SafeComponent from "./SafeComponnet";
+import ProductCard from 'home/ProductCard';
 
 const App = () => (
   <div className="max-w-6xl mx-auto mt-10 text-3xl">
-    <Header />
-    <div className="text-2xl font-bold text-red-500 my-14">Product details page</div>
+    <SafeComponent>
+      <Header />
+    </SafeComponent>
+    <div className="text-2xl font-bold text-red-500 my-14">
+      <ProductCard />
+    </div>
     <Footer />
   </div>
 );

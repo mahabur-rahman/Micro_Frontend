@@ -68,6 +68,7 @@ module.exports = (_, argv) => ({
       exposes: {
         "./Header" : "./src/components/Header.tsx",
         "./Footer" : "./src/components/Footer.tsx",
+        "./ProductCard": "./src/components/ProductCard.tsx",
         "./styles": "./src/index.css",
       },
       shared: {

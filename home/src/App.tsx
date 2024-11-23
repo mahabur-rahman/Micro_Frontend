@@ -4,11 +4,13 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./index.scss";
+import ProductCard from "./components/ProductCard";
 
 const App = () => (
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <Header />
-    <div className="font-bold text-2xl my-14">Home page</div>
+  <div className="max-w-6xl mx-auto mt-10 text-3xl">
+    <Header/>
+    <div className="text-2xl font-bold my-14">Home page</div>
+    <ProductCard />
     <Footer />
   </div>
 );

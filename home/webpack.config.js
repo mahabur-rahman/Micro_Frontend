@@ -69,6 +69,7 @@ module.exports = (_, argv) => ({
         "./Header" : "./src/components/Header.tsx",
         "./Footer" : "./src/components/Footer.tsx",
         "./ProductCard": "./src/components/ProductCard.tsx",
+         "./CartShow": "/src/components/CartShow.tsx",
         "./styles": "./src/index.css",
       },
       shared: {

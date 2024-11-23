@@ -3,12 +3,14 @@ import ReactDOM from "react-dom/client";
 
 import Header from "home/Header";
 import Footer from "home/Footer";
-import ProductCard from "home/ProductCard";
+// import ProductCard from "home/ProductCard";
+import List from 'todoList/List'
 
 import "home/styles";
+// import "todoList/styles";
 
-const CartShow = lazy(() => import("home/CartShow"));
-import List from "todoList/List";
+// const CartShow = lazy(() => import("home/CartShow"));
+
 
 const App = () => {
   const [shortItems, setShortItems] = useState([]);
@@ -37,7 +39,7 @@ const App = () => {
           </Suspense>
         </div> */}
 
-        <List />
+<List />
         <Footer />
       </div>
     </>
